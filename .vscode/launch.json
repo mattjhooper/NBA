@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/NBA.Test/bin/Debug/netcoreapp3.1/NBA.Test.dll",
+            "program": "${workspaceFolder}/NBA.Exe/bin/Debug/netcoreapp3.1/NBA.Exe.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/NBA.Test",
+            "cwd": "${workspaceFolder}/NBA.Exe",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
             "stopAtEntry": false

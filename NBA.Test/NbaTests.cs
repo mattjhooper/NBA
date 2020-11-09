@@ -44,5 +44,19 @@ namespace NBA.Test
             // testing(Nba.NbaCup(resultSheet3, "Boston Celt"),
             //         "Boston Celt:This team didn't play!");
         }
+
+        [Theory]
+        [InlineData("T1", 1, "T2", 2)]
+        [InlineData("T T1", 1, "A B C", 9)]
+        [InlineData("Golden State Warriors", 111, "New Orleans Pelicans", 95)]
+        [InlineData("Boston Celtics", 112, "Philadelphia 76ers", 95)]
+        public void TestExplode(string t1, int s1, string t2, int s2)
+        {
+            var x = Nba.Explode($"{t1} {s1} {t2} {s2}");
+            x.Team1.Should().Be(t1);
+            x.Team2.Should().Be(t2);
+            x.Score1.Should().Be(s1);
+            x.Score2.Should().Be(s2);
+        }
     }
 }
